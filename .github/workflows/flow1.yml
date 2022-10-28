@@ -1,8 +1,8 @@
 name: flow1
-run-name: Publish openapi for feature branch ${{ github.event.workflow_run.head_branch }} from bulid ${{ github.event.workflow_run.run_number }}
+run-name: 我是因為 ${{ github.event.workflow_run.head_branch }} build完才啟動的，他的版號是 ${{ github.event.workflow_run.run_number }}
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: ["feature-build"]
     types:
       - completed
   workflow_dispatch:
